@@ -73,18 +73,20 @@ const Intro = () => {
       >
         <Link
           href="#contact"
-          className="bg-gray-900 text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
-          Contact me <BsArrowRight />
+          Contact me{" "}
+          <BsArrowRight className="group-hover:translate-x-1 opacity-70 transition" />
         </Link>
 
         <a
           href="/CV_Arturs_Langenfelds.pdf"
           referrerPolicy="no-referrer"
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none borderBlack focus:scale-110 hover:scale-110 active:scale-105 transition"
           download
         >
-          Download CV <HiDownload />
+          Download CV{" "}
+          <HiDownload className="group-hover:translate-y-1 opacity-60 transition" />
         </a>
 
         <a
