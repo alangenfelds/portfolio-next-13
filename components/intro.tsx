@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -10,18 +8,11 @@ import Image from "next/image";
 import pict from "@/public/Art.jpg";
 import { yearsSinceYear } from "@/utils";
 import Link from "next/link";
-import { useActiveSectionContext } from "@/context/active-section-context";
+
+import { useSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
-  const { setActiveSection } = useActiveSectionContext();
-
-  const { ref, inView } = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView({ sectionName: "Home", threshold: 0 });
 
   return (
     <section
