@@ -14,6 +14,7 @@ import { experiencesData } from "@/lib/data";
 const Experience = () => {
   const { ref } = useSectionInView({
     sectionName: "Experience",
+    threshold: 0.4,
   });
 
   return (
