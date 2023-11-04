@@ -5,3 +5,7 @@
 .borderBlack {
   @apply border border-black/10;
 }
+
+html {
+  --line-color: #e5e7eb;
+}

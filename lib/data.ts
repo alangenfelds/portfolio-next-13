@@ -1,7 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { FaJava } from "react-icons/fa";
+// import { LuGraduationCap } from "react-icons/lu";
+import { CiBeaker1 } from "react-icons/ci";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import portalCMS from "@/public/portal-cms.jpg";
@@ -41,19 +43,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "QA Automation Engineer",
-    location: "Riga, Latvia",
-    description:
-      "I have developed test framework using JAVA/Selenium and CodeceptJS. Was responsible for creation of automation test scripts.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2018",
-  },
-  {
     title: "Front-End Developer",
     location: "Riga, Latvia",
-    description: "Developed web application for Insurance Company using React.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2018 - 2019",
+    description:
+      "Developed multiple Fintech web applications, developing company portal using JAMStack and headless CMS. Participating in the development of internal web applications.",
+    icon: React.createElement(FaReact),
+    date: "2020 - present",
   },
   {
     title: "Front-End Developer",
@@ -66,10 +61,26 @@ export const experiencesData = [
   {
     title: "Front-End Developer",
     location: "Riga, Latvia",
-    description:
-      "Developed multiple Fintech web applications, developing company portal using JAMStack and headless CMS. Participating in the development of internal web applications.",
+    description: "Developed web application for Insurance Company using React.",
     icon: React.createElement(FaReact),
-    date: "2020 - present",
+    date: "2018 - 2019",
+  },
+
+  {
+    title: "QA Automation Engineer",
+    location: "Riga, Latvia",
+    description:
+      "I have developed test framework using JAVA/Selenium and CodeceptJS. Was responsible for creation of automation test scripts.",
+    icon: React.createElement(FaJava),
+    date: "2018",
+  },
+  {
+    title: "Systems Administrator",
+    location: "Riga, Latvia",
+    description:
+      "Responsible for IT infrastructure of engineering company. MCSA, VMware certifications.",
+    icon: React.createElement(CgWorkAlt),
+    date: "1998-2018",
   },
 ] as const;
 
