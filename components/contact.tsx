@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
+
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import SubmitButton from "./submit-button";
@@ -44,6 +46,13 @@ const Contact = () => {
         className="mt-10 flex flex-col"
         action={async (formData) => {
           const result = await sendEmail(formData);
+
+          if (result.error) {
+            toast.error(result.error);
+            return;
+          }
+
+          toast.success("Email sent successfully!");
         }}
       >
         <input
