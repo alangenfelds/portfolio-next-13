@@ -7,6 +7,8 @@ export function yearsSinceYear(yearSince: number) {
   }
 }
 
+export const getCurrentYear = () => new Date().getFullYear();
+
 export const validateString = (
   value: unknown,
   maxLength: number
