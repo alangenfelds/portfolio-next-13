@@ -84,7 +84,7 @@ export const projectsData = [
   {
     title: "Government information platform",
     description:
-      "Developer information system UI. Developed GraphQL schemas. API integration with Apollo",
+      "Government information system UI. Developed GraphQL schemas. API integration with Apollo",
     tags: ["React", "TypeScript", "GraphQL", "Redux", "Formik"],
     imageUrl: elieta,
   },
@@ -136,11 +136,20 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "React",
+  "Next.js",
   "JavaScript",
   "TypeScript",
-  "React",
-  "Solidity",
+  "Redux",
+  "Node.js",
   "Tailwind",
+  "Web3",
+  "MaterialUI",
+  "antd",
+  "Firebase",
+  "Framer Motion",
+  "Vue.js",
+  "Svelte",
+  "CSS",
+  "HTML",
 ] as const;

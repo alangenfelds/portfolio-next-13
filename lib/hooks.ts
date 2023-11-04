@@ -6,12 +6,12 @@ import { SectionName } from "./types";
 
 type SectionInViewProps = {
   sectionName: SectionName;
-  threshold: number;
+  threshold?: number;
 };
 
 export const useSectionInView = ({
   sectionName,
-  threshold,
+  threshold = 0.75,
 }: SectionInViewProps) => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
