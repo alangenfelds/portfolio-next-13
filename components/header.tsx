@@ -1,15 +1,16 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
-import clsx from "clsx";
-
 import { links } from "@/lib/data";
 import Link from "next/link";
+import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-const Header = () => {
+export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -22,28 +23,30 @@ const Header = () => {
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
+              className="h-3/4 flex items-center justify-center relative"
               key={link.hash}
-              className="relative h-3/4 flex items-center justify-center"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                href={link.hash}
                 className={clsx(
-                  "flex items-center justify-center w-full px-3 py-3 hover:text-gray-950 transition",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
-                    "text-gray-950": activeSection === link.name,
+                    "text-gray-950 dark:text-gray-200":
+                      activeSection === link.name,
                   }
                 )}
+                href={link.hash}
                 onClick={() => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
               >
                 {link.name}
-                {activeSection === link.name && (
+
+                {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 px-4 py-4 rounded-full absolute inset-0 -z-10"
+                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
@@ -59,6 +62,4 @@ const Header = () => {
       </nav>
     </header>
   );
-};
-
-export default Header;
+}

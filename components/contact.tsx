@@ -43,7 +43,7 @@ const Contact = () => {
       </p>
 
       <form
-        className="mt-10 flex flex-col"
+        className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const result = await sendEmail(formData);
 
